@@ -34,8 +34,7 @@ public class PessoaFisicaRepo {
     public ArrayList<PessoaFisica> obterTodos() {
         return pessoaFi;
     }
-    
-    public void recuperar(String arquivoModel) throws Exception{
+    public void persistir(String arquivoModel) throws Exception{
         try{
         
         }
@@ -43,7 +42,7 @@ public class PessoaFisicaRepo {
             throw new Exception("Exception message");
         }
     }
-    public void persistir(String arquivoModel) throws Exception{
+    public void recuperar(String arquivoModel) throws Exception{
         try{
         
         }
