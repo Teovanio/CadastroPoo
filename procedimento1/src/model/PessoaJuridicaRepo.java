@@ -4,6 +4,10 @@
  */
 package model;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -34,11 +38,22 @@ public class PessoaJuridicaRepo {
     public ArrayList<PessoaJuridica> obterTodos() {
         return pessoaJu;
     }
-    public void persistir(String arquivoModel) throws Exception{
-        try{
-        
-        }
-        catch(Exception e){
+    public void persistir(String arquivoModel) throws Exception {
+        try {
+            String str = "";
+            for (int i = 0; i < pessoaJu.size(); i++) {
+                //String item = pessoaFi.get(i).getId().toString();
+                String item = pessoaJu.get(i).getId() + "; " + pessoaJu.get(i).getNome() + "; " + pessoaJu.get(i).getCnpj()+ "; ";
+                str = str + item + "\n";
+            }
+            BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\dev-teo\\CadastroPOO\\" + arquivoModel + ".bin"));
+            writer.write(str);
+
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        } catch (Exception e) {
             throw new Exception("Exception message");
         }
     }
