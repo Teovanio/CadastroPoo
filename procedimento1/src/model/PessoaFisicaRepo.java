@@ -4,7 +4,10 @@
  */
 package model;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -50,8 +53,7 @@ public class PessoaFisicaRepo {
                 //String item = pessoaFi.get(i).getId().toString();
                 String item = pessoaFi.get(i).getId() + "; " + pessoaFi.get(i).getNome() + "; " + pessoaFi.get(i).getCpf() + "; " + pessoaFi.get(i).getIdade() + "; ";
                 str = str + item + "\n";
-                        
-                
+
             }
             BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\dev-teo\\CadastroPOO\\" + arquivoModel + ".bin"));
             writer.write(str);
@@ -67,7 +69,23 @@ public class PessoaFisicaRepo {
 
     public void recuperar(String arquivoModel) throws Exception {
         try {
+            File file = new File(
+                    "D:\\dev-teo\\CadastroPOO\\" + arquivoModel + ".bin");
 
+            BufferedReader br
+                    = new BufferedReader(new FileReader(file));
+
+            String st;
+
+            while ((st = br.readLine()) != null) {
+                System.out.println(st);
+                String[] itens = st.split(";");
+                PessoaFisica pf = new PessoaFisica(itens[2].trim(), Integer.parseInt(itens[3].trim()), Integer.parseInt(itens[0].trim()), itens[1].trim());
+                pessoaFi.add(pf);
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
         } catch (Exception e) {
             throw new Exception("Exception message");
         }

@@ -26,11 +26,22 @@ public class CadastroPOO {
 
         repo1.persistir("pessoa-fisicaRepo1");
         
+        PessoaFisicaRepo repo2 = new PessoaFisicaRepo();
+        repo2.recuperar("pessoa-fisicaRepo1");
+        
         PessoaJuridicaRepo repo3 = new PessoaJuridicaRepo();
         repo3.inserir(new PessoaJuridica("00111222/0001-99", 003,"Jose enterprise"));
         repo3.inserir(new PessoaJuridica("00222333/0001-88", 004,"Maria enterprise"));
-        repo3.persistir("pessoa-JuridicaRepo3");
+        repo3.persistir("pessoa-juridicaRepo3");
+        
+        PessoaJuridicaRepo repo4 = new PessoaJuridicaRepo();
+        repo4.recuperar("pessoa-juridicaRepo3");
+        
+        
+        
+        
         
     }
+    
 
 }
