@@ -21,8 +21,8 @@ public class CadastroPOO {
     public static void main(String[] args) {
         // TODO code application logic here
         PessoaFisicaRepo repo1 = new PessoaFisicaRepo();
-        repo1.inserir(new PessoaFisica("00111122200", 35, 001, "Maria"));
-        repo1.inserir(new PessoaFisica("00122233301", 40, 002, "José"));
+        repo1.inserir(new PessoaFisica("00111122200", 35, 001, "Maria Luiza da Silva"));
+        repo1.inserir(new PessoaFisica("00122233301", 40, 002, "José da Silva Gonçalves"));
 
         //repo1.obterTodos().forEach(action);
         for (int i = 0; i < repo1.obterTodos().size(); i++) {

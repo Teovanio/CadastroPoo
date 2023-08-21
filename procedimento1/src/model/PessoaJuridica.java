@@ -39,8 +39,7 @@ public class PessoaJuridica extends Pessoa implements Serializable {
 
     @Override
     public void exibir() {
-        
+        System.out.println("classe filha");
     }
-    
-    
+        
 }

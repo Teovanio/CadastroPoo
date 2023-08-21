@@ -34,20 +34,20 @@ public class PessoaJuridicaRepo {
     public ArrayList<PessoaJuridica> obterTodos() {
         return pessoaJu;
     }
-    public void persistir(String arquivoModel){
+    public void persistir(String arquivoModel) throws Exception{
         try{
         
         }
         catch(Exception e){
-            System.out.println(e);
+            throw new Exception("Exception message");
         }
     }
-    public void recuperar(String arquivoModel){
+    public void recuperar(String arquivoModel) throws Exception{
         try{
         
         }
         catch(Exception e){
-            System.out.println(e);
+            throw new Exception("Exception message");
         }
     }
     
