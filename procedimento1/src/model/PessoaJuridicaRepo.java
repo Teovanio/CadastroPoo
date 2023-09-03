@@ -48,7 +48,7 @@ public class PessoaJuridicaRepo {
                 String item = pessoaJu.get(i).getId() + "; " + pessoaJu.get(i).getNome() + "; " + pessoaJu.get(i).getCnpj()+ "; ";
                 str = str + item + "\n";
             }
-            BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\dev-teo\\CadastroPOO\\" + arquivoModel + ".bin"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\dev\\CadastroPoo\\" + arquivoModel + ".bin"));
             writer.write(str);
 
             writer.close();
@@ -62,7 +62,7 @@ public class PessoaJuridicaRepo {
     public void recuperar(String arquivoModel) throws Exception{
         try {
             File file = new File(
-                    "D:\\dev-teo\\CadastroPOO\\" + arquivoModel + ".bin");
+                    "C:\\dev\\CadastroPoo\\" + arquivoModel + ".bin");
 
             BufferedReader br
                     = new BufferedReader(new FileReader(file));

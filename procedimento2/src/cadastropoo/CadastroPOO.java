@@ -206,52 +206,6 @@ public class CadastroPOO {
 
             }
         }
-
-        // bloco de código que será executado
-        // bloco de código que será executado
-        // bloco de código que será executado
-        // bloco de código que será executado
-        // bloco de código que será executado
-        // bloco de código que será executado
-        // bloco de código que será executado
-        // bloco de código que será executado
-// bloco de código que será executado se nenhum dos cases for aceito
-        /*
-        // TODO code application logic here
-        PessoaFisicaRepo repo1 = new PessoaFisicaRepo();
-        repo1.inserir(new PessoaFisica("00111122200", 35, 001, "Maria"));
-        repo1.inserir(new PessoaFisica("00122233301", 40, 002, "José"));
-
-        //repo1.obterTodos().forEach(action);
-        for (int i = 0; i < repo1.obterTodos().size(); i++) {
-            System.out.println("id:" + repo1.obterTodos().get(i).getId());
-            System.out.println("Nome:" + repo1.obterTodos().get(i).getNome());
-            System.out.println("CPF:" + repo1.obterTodos().get(i).getCpf());
-        }
-        
-        repo1.persistir("teste");
-        PessoaFisicaRepo repo2 = new PessoaFisicaRepo();
-        repo2.recuperar("teste");
-        
-        PessoaJuridicaRepo repo3 = new PessoaJuridicaRepo();
-        repo3.inserir(new PessoaJuridica("00111222/0001-99", 003,"Jose enterprise"));
-        repo3.inserir(new PessoaJuridica("00222333/0001-88", 004,"Maria enterprise"));
-        
-        for (int i = 0; i < repo3.obterTodos().size(); i++) {
-            System.out.println("id:" + repo3.obterTodos().get(i).getId());
-            System.out.println("Nome:" + repo3.obterTodos().get(i).getNome());
-            System.out.println("CNPJ:" + repo3.obterTodos().get(i).getCnpj());
-        }
-        
-        repo3.persistir("testeju");
-        PessoaJuridicaRepo repo4 = new PessoaJuridicaRepo();
-        repo4.recuperar("testeju");
-        
-        for (int i = 0; i < repo4.obterTodos().size(); i++) {
-            System.out.println("id:" + repo4.obterTodos().get(i).getId());
-            System.out.println("Nome:" + repo4.obterTodos().get(i).getNome());
-            System.out.println("CNPJ:" + repo4.obterTodos().get(i).getCnpj());
-        }*/
     }
 
 }

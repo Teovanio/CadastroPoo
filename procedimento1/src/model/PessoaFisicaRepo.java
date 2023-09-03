@@ -55,7 +55,7 @@ public class PessoaFisicaRepo {
                 str = str + item + "\n";
 
             }
-            BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\dev-teo\\CadastroPOO\\" + arquivoModel + ".bin"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\dev\\CadastroPoo\\" + arquivoModel + ".bin"));
             writer.write(str);
 
             writer.close();
@@ -70,7 +70,7 @@ public class PessoaFisicaRepo {
     public void recuperar(String arquivoModel) throws Exception {
         try {
             File file = new File(
-                    "D:\\dev-teo\\CadastroPOO\\" + arquivoModel + ".bin");
+                    "C:\\dev\\CadastroPoo\\" + arquivoModel + ".bin");
 
             BufferedReader br
                     = new BufferedReader(new FileReader(file));
