@@ -61,7 +61,7 @@ public class PessoaFisicaRepo {
 
             // Declaring and initializing the string with
             // custom path of a file
-            String path = "D:\\dev-teo\\" + arquivoModel + ".fisica.bin";
+            String path = "C:\\dev\\CadastroPoo\\" + arquivoModel + ".fisica.bin";
 
             // Creating an instance of Inputstream
             InputStream is = new FileInputStream(path);
@@ -93,7 +93,7 @@ public class PessoaFisicaRepo {
     public void persistir(String arquivoModel) throws Exception {
 
         try {
-            Path path = Paths.get("D:\\dev-teo\\" + arquivoModel + ".fisica.bin");
+            Path path = Paths.get("C:\\dev\\CadastroPoo\\" + arquivoModel + ".fisica.bin");
 
             String banco = "";
 
